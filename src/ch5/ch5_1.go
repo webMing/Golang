@@ -36,6 +36,7 @@ func add_type5(a string, b int) {
 	fmt.Printf("函数有参数:%s %d 没有返回值", a, b)
 }
 
-func add_type5(a string, b int) string {
+func add_type6(a string, b int) string {
 	fmt.Printf("函数有参数:%s %d 有一个返回值 %s", a, b)
+	return "ssdfd"
 }
