@@ -55,7 +55,25 @@ func main() {
 	for i,v := range runes {
 		fmt.Printf("runes[%d] = %q \n",i,v)
 	}
+	
+	var s []int
+	fmt.Printf("len(s) = %d ;cap(s) = %d \n",len(s),cap(s))
+	fmt.Printf("test is nil:%v \n",[]int(nil))
+
+	//append
+	aa := []int{}
+	fmt.Printf("aa: %v\n",aa)
+	aa = append(aa,4,5,6)
+	aa = append(aa,3,4,5)
+	bb := []int{44,66}
+	aa = append(aa,bb...)
+	fmt.Printf("aa: %v\n",aa)
+	bb[0] = 99
+	bb[1] = 99 //改变之后是值？ 还是指针？
+	bb = append(bb,99)
+	fmt.Printf("aa: %v \n",aa)
 	fmt.Printf("===============================\n")
+	
 }
 
 
