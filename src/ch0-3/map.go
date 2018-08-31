@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"sort"
 	)
 
 func main() {
@@ -32,7 +33,27 @@ func main() {
 
 	if len(emptyMap) == 0 {
 		fmt.Printf("emptyMap is empty! \n")
-	} 
+	}
+	
+	delete(ages,"li")
+	fmt.Printf("map ages:%v \n",ages) 
+	
+	ages["bob"] = ages["bob"] + 1
+	ages["bob"] +=  1
+	ages["bob"]++
+	//fmt.Printf("take address:%v",&ages["bob"])
+	fmt.Printf("ages[\"bob\"] : %v \n",ages)
+	
+	letters := map[string]string{"a":"A","c":"C","d":"D"}
+	lettersKey := []string{}
+	for k,_ := range letters {
+		lettersKey = append(lettersKey,k)
+	}
+	sort.Strings(lettersKey) //排序
+	for _,v := range lettersKey {
+		fmt.Printf("letters[%s] : %v \n",v,letters[v])
+	}
+
 	fmt.Println("================")
 
 }
