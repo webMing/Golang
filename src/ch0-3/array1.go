@@ -65,6 +65,10 @@ func main() {
 	//h := [3]int
 	//h := [...]int{1,3}
 	//h := [...]int{10:4}
+
+	//var te uint8 = 6
+	//var tes = []byte(te)
+	//fmt.Printf("%v \n",tes) 
 }
 
 
