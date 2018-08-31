@@ -2,10 +2,16 @@ package main
 
 import (
 	"fmt"
+	"time"
 )
 
+const ff  time.Duration = 0
+
 func main() {
+	fmt.Printf("%T %v \n",ff,ff)
 	fmt.Println("Test func!")
+	a := add_type7("3",2)
+	fmt.Printf("a value %d \n",len(a))
 }
 
 // 函数声明形式
@@ -37,6 +43,11 @@ func add_type5(a string, b int) {
 }
 
 func add_type6(a string, b int) string {
-	fmt.Printf("函数有参数:%s %d 有一个返回值 %s", a, b)
+	fmt.Printf("函数有参数:%s 有一个返回值 %d", a, b)
 	return "ssdfd"
+}
+
+func add_type7(a string, b int) (r string) {
+	fmt.Printf("函数有参数:%s %d 有一个返回值: %s",a,b,r)
+	return 
 }
