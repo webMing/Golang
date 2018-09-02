@@ -21,6 +21,13 @@ func main() {
 	}
 	fmt.Printf("m1 value : \n%v\n",m1)
 
+	//字典数组的字面量(值的字面量)	
+	m2 := map[string][3]string {
+		"name" : {"李","赵","王"},
+		"score" : {"34","45"},
+	}
+	fmt.Printf("m2 value : \n%v\n",m2)
+
 	fmt.Println("------------------------")
 
 }
