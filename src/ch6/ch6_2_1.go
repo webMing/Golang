@@ -25,6 +25,15 @@ func main(){
 		fmt.Printf("The value is: %d \n",begin.Value)
 	} 
 
+	fmt.Printf("Sum Value :%d \n",first.Sum())
+}
+
+
+func (li *IntList) Sum() int {
+	if li == nil {
+	   return 0
+	}
+	return li.Value + li.Tail.Sum()
 }
 
 
