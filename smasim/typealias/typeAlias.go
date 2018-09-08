@@ -1,0 +1,5 @@
+package typealias
+
+import (
+	"fmt"
+)
