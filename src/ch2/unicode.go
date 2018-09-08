@@ -6,6 +6,7 @@ import (
 )
 
 func main() {
+
 	//如果是英文使用效果是相同的.
 	fmt.Println(len("abcdef"))
 	fmt.Println(utf8.RuneCountInString("abcdef"))
@@ -24,4 +25,5 @@ func main() {
 	fmt.Printf("%%v :\t  %v\n", profile)
 	fmt.Printf("%%#v:\t  %#v \n", profile)
 	fmt.Printf("%%+v:\t  %+v \n", profile)
+
 }
