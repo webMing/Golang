@@ -1,4 +1,9 @@
 package typealias
+
+import (
+	"fmt"
+	"time"
+)
 /*
 	类型定义 和 类型别名一定要区别
 
@@ -9,9 +14,6 @@ package typealias
 	type Ste_int = int 
 
 */
-import (
-	"fmt"
-)
 
 //类型别名
 type IntAlias = int
@@ -21,9 +23,13 @@ type NewInt int
 
 //SteTestTypeAlias
 func SteTestTypeAlias(){
-	fmt.Println("test begin")
+	//区别不同之处
 	var a IntAlias 
 	var b NewInt	
 	fmt.Printf("%T \t %T \n",a,b)
-	fmt.Println("test end")
 }
+
+//如果我想给 myDuration 添加方法是不行的,因为time.Duration和typeAlias相比属于不同的包
+type myDuration = time.Duration
+/*下面这样会报错*/
+//func (m myDuration) doSome() {}
