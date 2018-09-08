@@ -1,9 +1,10 @@
 package main
 
 import (
-	"fmt"
+	"bytes"
 	"encoding/base64"
-	)
+	"fmt"
+)
 
 func main() {
 
@@ -13,8 +14,15 @@ func main() {
 	fmt.Println(encodeMessage)
 	data, err := base64.StdEncoding.DecodeString(encodeMessage)
 	if err == nil {
-		fmt.Printf("data:%v \n",string(data))
-	}else {
-		fmt.Printf("err:%v \n",err)
+		fmt.Printf("data:%v \n", string(data))
+	} else {
+		fmt.Printf("err:%v \n", err)
 	}
+
+	//字符串拼接
+	var buf = bytes.Buffer{} //声明为空对象
+	buf.WriteRune('你')
+	buf.WriteString("好啊，朋友")
+	fmt.Println(buf.String())
+
 }
