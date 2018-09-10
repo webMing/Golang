@@ -39,4 +39,8 @@ func ForStatement() {
 		f++
 	 }
 
+	 for _,v := range []int{1,3,4,5} {
+		 fmt.Printf("for range : %d \n",v)
+	 }
+
 }
