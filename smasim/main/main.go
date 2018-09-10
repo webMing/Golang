@@ -8,5 +8,7 @@ import (
 func main() {
     //ctlflow.ContentStatment()
 	//typealias.SteTestTypeAlias()
-	ctlflow.ForStatement()
+   //ctlflow.ForStatement()
+      ctlflow.GotoStatement()
+	
 }
