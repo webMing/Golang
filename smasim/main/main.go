@@ -1,9 +1,12 @@
 package main
 
 import (
-	"../typealias"
+	//"../typealias"
+	"../ctlflow"
 )
 
 func main() {
-	typealias.SteTestTypeAlias()
+    //ctlflow.ContentStatment()
+	//typealias.SteTestTypeAlias()
+	ctlflow.ForStatement()
 }
