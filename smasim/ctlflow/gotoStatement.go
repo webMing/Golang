@@ -39,6 +39,14 @@ func GotoStatement() {
 
 func customPrintf() {
 	fmt.Println("customPrintf")
-	
 }
 
+func continueExcute() {
+	
+	for i := 0 ; i < 20 ;i++ {
+		if i % 2 == 0 {
+			continue
+		}
+		fmt.Printf("i : %d \n",i)
+	}	
+}
