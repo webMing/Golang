@@ -5,7 +5,7 @@
 		}
 	],
 	"settings": {
-		"go.gopath": "~/Desktop/SourceTree/Golang/smasim/",
-		"go.inferGopath": true,
+		//"go.gopath": "~/Desktop/SourceTree/Golang/smasim/",
+	     "go.inferGopath": true,
 	}
 }
