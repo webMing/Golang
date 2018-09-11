@@ -3,7 +3,7 @@ package main
 import (
 	//"../typealias"
 	//"../ctlflow"
-	"../sfunc"
+	"sfunc"
 )
 
 func main() {
