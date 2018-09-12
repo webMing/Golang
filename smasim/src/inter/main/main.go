@@ -8,11 +8,24 @@ import (
 
 func main() {
 	//byteConter()
-	interSatisf()
+	//interSatisf()
+	//emptyInter()
+	inter.FlagValue()
 }
 
 
+func emptyInter(){
+   var a interface{}
+   a = nil
+   a = 2
+   a = struct{}{}
+   a = 34.3
+   a = [4]int{0}
+   a = []int{34:0}
+   a = map[string]int{}
+	fmt.Println(a)
 
+}
 
 //IntSet is  testCode
 type IntSet struct{ /*空的结构体*/}
