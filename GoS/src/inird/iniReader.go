@@ -41,7 +41,7 @@ func readFile(f *os.File,sectionName,key string) (string,error) {
 		if lineStr == "" || lineStr == ";"{
 			continue
 		}
-      
+        
 		lineStr = strings.TrimSpace(lineStr)
 
 		if lineStr[0] == '[' && lineStr[len(lineStr)-1] == ']' {

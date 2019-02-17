@@ -1,7 +1,7 @@
 package main
 
 import (
-	//"fmt"
+	"fmt"
 	//相对路径
 	//"../ch2"
 	//"../inird"
@@ -21,4 +21,8 @@ func main() {
 		}
 	*/
 	steconst.ConstTest()
+}
+
+func customPrint() {	
+	fmt.Printf("this is very good!");
 }
