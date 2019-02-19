@@ -1,13 +1,12 @@
-package main
+package   puty
 
 import (
 	"fmt"
 	"os"
-	"time"
 	"strings"
 )
 
-func main() {
+func custom() {
 	// echo2()
 	// echo3()
 	// processName()
@@ -49,6 +48,5 @@ func processName() {
 func argsIndexAndValue() {
 	for index,value := range os.Args[1:] {
 		fmt.Printf("index:%d value:%v \n",index, value)	
-	}
-	time.Now()	
+	}	
 }
