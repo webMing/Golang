@@ -1,4 +1,4 @@
-package   puty
+package ch2
 
 import (
 	"fmt"
@@ -6,7 +6,11 @@ import (
 	"strings"
 )
 
-func custom() {
+// YY 外部使用
+const YY = 3
+
+// StephanieT  外部调用
+func StephanieT() {
 	// echo2()
 	// echo3()
 	// processName()
