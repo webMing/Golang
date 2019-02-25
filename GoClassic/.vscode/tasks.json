@@ -6,9 +6,6 @@
         {
             "label": "Go run",
             "type": "shell",
-            // "options": {
-            //     "cwd": "${workspancre}/ch/"
-            // },
             "command": "go",
             "args": [
                 "run",
@@ -17,7 +14,10 @@
             "group": {
                 "kind": "build",
                 "isDefault": true
-            }
+            },
+            "problemMatcher": [
+                "$go"
+            ]
         }
     ]
 }

@@ -1,0 +1,47 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Go-Run",
+            "type": "shell",
+            "command": "go",
+            // "args": [
+            //     "run",
+            //     "${file}"
+            // ],
+            // 测试当前的gopath
+            "args": ["${GOPATH}"],
+            "group":{
+                "kind":"build",
+                "isDefault":true
+            },
+            // 设置并没有效果
+            // "options": {
+            //     "env": {
+            //         "${GOPATH}":"/usr"
+            //     }
+            // }
+        },
+        {
+            "label": "Go-Build",
+            "type": "shell",
+            "command": "go",
+            "args": [
+                "build",
+                "${file}"
+            ],
+            // "args": ["${GOPATH}"],
+            "group":{
+                "kind":"build",
+                "isDefault":true
+            },
+            // "options": {
+                // "env": {
+                    // "${GOPATH}":"/"
+                // }
+            // }
+        }
+    ]
+}
