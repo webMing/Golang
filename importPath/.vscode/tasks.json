@@ -6,21 +6,22 @@
         {
             "label": "Go-Run",
             "type": "shell",
-            "command": "go",
-            // "args": [
-            //     "run",
-            //     "${file}"
-            // ],
+            //"command": "export GOPATH=\"$PWD\";echo $GOPATH;go run \"$1\"",
+            // "command":["export GOPATH=\"$PWD\";","echo $GOPATH;","go"],
+            "command":"ex.sh",
+            "args":[
+              "${file}"
+            ],
             // 测试当前的gopath
-            "args": ["${GOPATH}"],
+            //"args": ["$GOPATH"],
             "group":{
                 "kind":"build",
                 "isDefault":true
             },
-            // 设置并没有效果
+            // 设置并没有效果  cwd默认值:workSpace
             // "options": {
             //     "env": {
-            //         "${GOPATH}":"/usr"
+            //         "GOPATH":"$PWD"
             //     }
             // }
         },

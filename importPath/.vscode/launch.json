@@ -16,7 +16,8 @@
             //"preLaunchTask": "Go-Build"
 
             //执行debug后执行的任务
-            "postDebugTask": "Go-Build"
+            "postDebugTask": "Go-Run"
+        
         }
     ]
 }
