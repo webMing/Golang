@@ -1,9 +1,12 @@
 package main
 
 import (
-	"ch5"
+	"fmt"
+	//"ch5"
 )
 
 func main() {
-	ch5.LearnArray()
+	//ch5.LearnArray()
+	s := make([]int,3)[3:]
+	fmt.Println("len:",len(s),"cap(s):",cap(s))
 }

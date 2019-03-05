@@ -6,6 +6,10 @@ import (
 
 //LearnArray 数组 
 func LearnArray() {
+	//简单的数组声明
+	var b1  [4]int
+	fmt.Println(b1)
+
 	//数组声明
 	a1 := [3]int{1,3,4}
 	fmt.Println(a1)

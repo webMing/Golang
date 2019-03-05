@@ -12,7 +12,7 @@
             "program": "${fileDirname}",
             "env": {},
             "args": [],
-            "postDebugTask":"Go Run",
+            //"postDebugTask":"Go Run",
             // "preLaunchTask": ""
         }
     ]
