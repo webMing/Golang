@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	// "ch5"
+	"ch5"
 )
 
 func main() {
@@ -12,7 +12,8 @@ func main() {
 	fmt.Println("len:",len(s),"cap(s):",cap(s))
 
 	fmt.Println()
-	fmt.Println()
+
+	ch5.MyArray()
 	// ch5.FunValuePassTest()
 
 	//m := [...]int{7:7}[3:] //m :[0,0,0,0,0,0,7]
