@@ -12,8 +12,8 @@
             "program": "${fileDirname}",
             "env": {},
             "args": [],
-            //"postDebugTask":"Go Run",
-            // "preLaunchTask": ""
+            // "postDebugTask":"Go Run",
+            "preLaunchTask": "Go Run"
         }
     ]
 }
