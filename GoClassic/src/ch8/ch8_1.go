@@ -19,7 +19,7 @@ func (db dataBase) ServeHTTP(w http.ResponseWriter, req *http.Request) {
 	}
 }
 
-func test1() {
+func Test() {
 	//显示io.Buffer 到底是什么类型
 	fmt.Println("This is Http1")
 	// io.Writer 是接口类型 
