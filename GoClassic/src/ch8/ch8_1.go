@@ -5,8 +5,14 @@ import (
 	"net/http"
 )
 
-type dollars float32
+// Ste test type
+type Ste int 
+// Aab 是一个测试方法
+func (s Ste) ab(){
+// 这个是空的方法，
+}
 
+type dollars float32
 func (d dollars)String() string{ 
 	return fmt.Sprintf("$%.2f",d)
 }
@@ -19,10 +25,4 @@ func (db dataBase) ServeHTTP(w http.ResponseWriter, req *http.Request) {
 	}
 }
 
-func Test() {
-	//显示io.Buffer 到底是什么类型
-	fmt.Println("This is Http1")
-	// io.Writer 是接口类型 
 
-
-}
