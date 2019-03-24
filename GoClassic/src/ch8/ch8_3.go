@@ -75,3 +75,56 @@ func A8T() {
 	
 }
 
+//Queue 自定义的一个队列
+type Queue []int 
+
+func (q *Queue) push(v int) {
+	*q = append(*q, v)
+}
+
+//A9T 测试9 slice 是否会改变
+func A9T() {
+
+	s := []int{1,2,3,4,5}
+	chageSliceValue(s)	
+	fmt.Printf("values %v \n", s)
+
+	fmt.Println("--------------------------------------")
+	q := make(Queue, 1)
+	q.push(1)
+	q.push(2)
+	q.push(3)
+	q.push(4)
+	fmt.Printf("Queue type :%v \n",q)
+	
+	fmt.Println("--------------------------------------")
+	f  := []int{}
+	push(&f,1)	
+	push(&f,2)	
+	push(&f,3)	
+	fmt.Printf("content of f:%v \n", f)
+
+	fmt.Println("--------------------------------------")
+	m := []int{1}
+	m = append(m, 2)
+	m = append(m, 3)
+	m = append(m, 4)
+	fmt.Printf("contentof m :%v \n", m)
+
+	fmt.Println("--------------------------------------")
+	mon := [...]string{"","1","2","3","4","5","6","7","8","9","10","11","12"}
+	fmt.Printf("len:%d cap:%d \n",len(mon),cap(mon))
+	q1 := mon[0:len(mon) - 1]
+	fmt.Printf("q1:%v  %d\n", q1,len(q1))
+
+}
+
+func push(q *[]int, v int) {
+	*q = append(*q, v)		
+}
+
+func chageSliceValue(s []int) {
+	for i := range s {
+		s[i] = 0
+	}
+}
