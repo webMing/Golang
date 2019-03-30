@@ -2,14 +2,15 @@ package main
 
 import (
 	"fmt"
-	// "ch8"
+	"ch8"
 )
 
 // main func
 func main() {
 
 	fmt.Println("This is interface!")
-
+	
+	/*
 	var s string
 	if s != "" {
 		fmt.Println(s)
@@ -30,7 +31,7 @@ func main() {
 	} else {
 		fmt.Println("Interface is nil")
 	}
-
+	*/
 	// fmt.Println(b)
 	//ch8.A1T()
 	//ch8.A2T()
@@ -41,4 +42,6 @@ func main() {
 	//ch8.A8T()
 	// ch8.A9T()
 	// ch8.Q3()
+	// ch8.Serve1()
+	ch8.Q4()
 }

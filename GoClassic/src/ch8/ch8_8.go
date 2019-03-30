@@ -8,6 +8,7 @@ import (
 	"net"
 )
 
+//Diat 网络请求
 func Diat() {
 	con, err := net.Dial("tcp", "localhost:8000")
 	if err != nil {
