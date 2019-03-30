@@ -1,6 +1,7 @@
 package main
 
 import (
+	"log"
 	"fmt"
 	"ch8"
 )
@@ -16,5 +17,6 @@ func main() {
 	//ch8.A6T()
 	//ch8.A7T()
 	//ch8.A8T()
-	ch8.A9T()
+	// ch8.A9T()
+	ch8.Q3()
 }
