@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"flag"
 )
+
 var period = flag.Duration("period", 1 * time.Second, "sleep peroid")	
 //Q1 解析命令行参数
 func Q1() {

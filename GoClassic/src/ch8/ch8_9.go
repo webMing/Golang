@@ -8,16 +8,16 @@ import (
 
 //Q4 关于时间一些内容
 func Q4() {
-	// displayCurrentTime()
+	displayCurrentTime()
 	// formatTime()
 	// initTime()
-	cuParaseUnixTime()
+	// cuParaseUnixTime()
 }
 
 // 在不同的时区显示当前的时间
 func displayCurrentTime() {
 	ltime := time.Now()
-	local, err := time.LoadLocation("Asia/Chongqing")
+	local, err := time.LoadLocation("Asia/Tokyo")
 	if err != nil { log.Fatal(err)
 	}
 	fmt.Println(ltime.In(local))
