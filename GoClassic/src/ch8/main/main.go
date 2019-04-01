@@ -1,10 +1,10 @@
 package main
 
 import (
-	"log"
+	// "log"
 	// "os"
 	"fmt"
-	// "ch8"
+	"ch8"
 )
 
 // main func
@@ -46,11 +46,5 @@ func main() {
 	// ch8.Q3()
 	// ch8.Serve1()
 	// ch8.Q4()
-	// ch8.Q5()
-	defer  func(){fmt.Println("GOOOOGGO")}()
-	deferT()
-}
-func deferT() {
-	defer fmt.Println("Defer excute...")
-	log.Fatal("abc")
+	ch8.Q5()
 }
