@@ -12,5 +12,5 @@ func Q5(){
 	 c := f()
 	  fmt.Println(c)
 //    fmt.Println(f())
-   fmt.Println("Hello World")	
+	 fmt.Println("Hello World")	
 }

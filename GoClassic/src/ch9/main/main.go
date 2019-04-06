@@ -11,6 +11,7 @@ func main() {
 	// ch9.Q1()
 	// ch9.Q2()
 	//ch9.Q3()
-	ch9.Q5()
-	time.Sleep(3 * time.Second)
+	// ch9.Q5()
+	ch9.Q6()
+	time.Sleep(10 * time.Minute)
 }
