@@ -3,6 +3,7 @@ package ch9
 import (
 	// "gopl.io/ch5/links"
 	// "html"
+	"log"
 	"io/ioutil"
 	"net/http"
 	"fmt"
@@ -16,27 +17,29 @@ func Q6() {
 	fetch()
 } 
 
-const requstURL = "http://www.baidu.com"
+const requstURL = "http://tup.com.cn/index.html"
 func fetch() {
 	resp, err := http.Get(requstURL)	
 	if  err != nil  {
-		fmt.Fprintf(os.Stderr, "fetch: reading %s: %v \n",requstURL,err)	
-		os.Exit(1)
+		log.Fatalf("fetch reading %s: %v \n", requstURL,err)
 	}
 	b, err := ioutil.ReadAll(resp.Body)
 	resp.Body.Close()
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "fetch reading %s: %v \n", requstURL,err)
-		os.Exit(1)
+		log.Fatalf("fetch reading %s: %v \n", requstURL,err)
 	}
 	fmt.Fprintf(os.Stdin, "%s",b)
 	doc, err := html.Parse(os.Stdin)
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "findLins: %v \n", err)
+		log.Fatalf("findLinks: %v \n", err)
 	}
+	fmt.Println(doc)
+	fmt.Println("The end")
+	return
 	for _, link := range visit(nil,doc) {
 		fmt.Println(link)
 	}
+	fmt.Println("This is TTT")
 }
 
 func visit(links []string, n *html.Node) []string {

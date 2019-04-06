@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"ch9" 
-	"time"
+	// "time"
 )
 
 func main() {
@@ -12,6 +12,7 @@ func main() {
 	// ch9.Q2()
 	//ch9.Q3()
 	// ch9.Q5()
-	ch9.Q6()
-	time.Sleep(10 * time.Minute)
+	// ch9.Q6()
+	ch9.Q7()
+	// time.Sleep(10 * time.Minute)
 }
