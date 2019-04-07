@@ -10,6 +10,23 @@
             "args": [
                 "${file}"
             ],
+            /*
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            }, */
+            "problemMatcher": [
+                "$go"
+            ]
+        },
+        {
+            "label": "Build",
+            "type": "shell",
+            "command": "bash -c \"$PWD\"",
+            "args": [
+                "build",
+                "${file}"
+            ],
             "group": {
                 "kind": "build",
                 "isDefault": true

@@ -29,6 +29,7 @@
             // "preLaunchTask": "Go Run"
         },
         {
+            //此种模式必须有可执行文件
             "name": "Exec",
             "type": "go",
             "request": "launch",
