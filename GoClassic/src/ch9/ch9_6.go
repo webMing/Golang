@@ -27,7 +27,7 @@ func fetch() {
 	defer resp.Body.Close()
 	doc, err := html.Parse(resp.Body)
 	if err != nil {
-		Log.Fatalf("findLinks: %v \n", err)
+		log.Fatalf("findLinks: %v \n", err)
 	}
 	for _, link := range visit(nil,doc) {
 		fmt.Println(link)

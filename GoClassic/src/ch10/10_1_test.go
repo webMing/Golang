@@ -4,11 +4,17 @@ import (
 	"testing"
 )
 
+// 通过测试的标志
 const passFlag = '\u2705'
-const notPass = '\u274E'
+// 没有通过测试的标志
+const notPassFlag = '\u274E'
 
 func Test_case1(t *testing.T) {
 	t.Log("Testing content \n")
-	t.Log(passFlag,notPass)
-	t.Logf("%c \n %c \n",passFlag,notPass)
+	t.Log(passFlag,notPassFlag)
+	t.Logf("%c \n %c \n",passFlag,notPassFlag)
+}
+
+func Test_case2(t *testing.T){
+	t.Log(" \n  Testing two \n")
 }
