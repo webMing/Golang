@@ -1,6 +1,7 @@
 package ch9
 
 import (
+	"os"
 	// "gopl.io/ch5/links"
 	// "html"
 	"fmt"
@@ -27,4 +28,12 @@ func allocL() {
 
 	c := [100]int{}
 	fmt.Printf("%p \n",&c)
+
+
+	str := "This is string!@!"
+	fmt.Fprintf(os.Stdin, "%s", str)
+	var b []byte
+	os.Stdin.Read(b)
+	fmt.Printf(" =    = =======  %s",b)
+
 }
