@@ -31,12 +31,20 @@
                 "kind": "build",
                 "isDefault": true
             },
-            "options": {
-                // 添加环境变量
-                "env": {
-                    //"GOPATH":"/Users/stephanie/go:${workspaceFolder}"
-                    "GOPATH":"ls $(go env GOPATH)"
-                }
+            "windows": {
+                "options": {
+                    "env": {
+                        // set GOPATH for windows
+                        //"GOPATH":"$(go env GOPATH)"
+                    }
+                },
+            },
+            "linux": {
+                "options": {
+                    "env": {
+                        "GOPATH":"/Users/Stephanie/go/:${workspaceFolder}"
+                    }
+                },
             },
             "problemMatcher": [
                 "$go"
