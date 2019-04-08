@@ -22,7 +22,7 @@
         {
             "label": "Build",
             "type": "shell",
-            "command": "bash -c \"$PWD\"",
+            "command": "go",
             "args": [
                 "build",
                 "${file}"
@@ -30,6 +30,13 @@
             "group": {
                 "kind": "build",
                 "isDefault": true
+            },
+            "options": {
+                // 添加环境变量
+                "env": {
+                    //"GOPATH":"/Users/stephanie/go:${workspaceFolder}"
+                    "GOPATH":"ls $(go env GOPATH)"
+                }
             },
             "problemMatcher": [
                 "$go"
