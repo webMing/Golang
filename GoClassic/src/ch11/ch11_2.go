@@ -18,6 +18,7 @@ import (
 	"os"
 )
 
+// 通过模板展示 返回的SJON 数据
 const templ = ` {{.TotalCount}} issues:
 {{range .Items}} -----------------------
 Number:{{.Number}}
@@ -75,6 +76,7 @@ func Extern3() {
 		Items: []string{
 			"My photos",
 			"My blog",
+			"My book",
 		},
 	}
 

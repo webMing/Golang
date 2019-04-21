@@ -17,8 +17,8 @@ import (
 
 // Extern1  go_web 1-1 codes
 func Extern1() {
-	http.HandleFunc("/", handler)
-	http.ListenAndServe("localhost:8080", nil)
+	http.HandleFunc("/x/y/", handler)
+	http.ListenAndServe("localhost:8090", nil)
 }
 
 func handler(writer http.ResponseWriter, request *http.Request) {
