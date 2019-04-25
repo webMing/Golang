@@ -11,7 +11,7 @@
 package ch11
 
 import (
-	"log"
+	// "log"
 	"fmt"
 	"net/http"
 )
@@ -29,10 +29,11 @@ func header(w http.ResponseWriter, r *http.Request) {
 // 读取body
 func body(w http.ResponseWriter,r *http.Request) {
 	fmt.Printf("ContentLenth:%d \n",r.ContentLength)
-	body := make([]byte, r.ContentLength)
+	// body := make([]byte, r.ContentLength)
+	body := []byte{}
 	n,err := r.Body.Read(body)
 	if n == 0 && (err != nil) {
-		log.Fatalln(err)
+		// log.Fatalln(err)
 	}
 	fmt.Fprintf(w,"%s",body)
 }
