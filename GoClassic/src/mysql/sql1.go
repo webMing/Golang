@@ -102,3 +102,25 @@ func Example3() {
 	log.Println(sex)
 
 }
+
+//Example4 Single-Row Queries Use content
+func Example4() {
+
+	db,err := sql.Open("mysql", dsn)
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer db.Close()
+
+	stmt,err := db.Prepare(`SELECT sex FROM users WHERE name = ?`)
+	if err != nil {
+		log.Fatal(err)
+	}
+	var sex string
+	err = stmt.QueryRow(`李肖`).Scan(&sex)
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Println(sex)
+
+}
