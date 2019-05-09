@@ -58,6 +58,8 @@ func Example2() {
 	if err != nil {
 		log.Fatal(err)
 	}	
+	defer stmt.Close()
+
 	rows,err := stmt.Query(`李肖`)
 	if err != nil {
 		log.Fatal(err)
@@ -80,6 +82,23 @@ func Example2() {
 	if err = rows.Err(); err != nil {
 		log.Fatal(err)
 	}
-	defer stmt.Close()
+
+}
+
+//Example3 Single-Row Queries
+func Example3() {
+
+	db,err := sql.Open("mysql",dsn)
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer db.Close()
+
+	var sex string 
+	err = db.QueryRow("SELECT sex FROM users WHERE name=?",`李贝`).Scan(&sex)
+	if err != nil {
+		log.Fatal(err)
+	}
+	log.Println(sex)
 
 }

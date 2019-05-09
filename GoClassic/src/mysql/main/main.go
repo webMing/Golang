@@ -6,5 +6,6 @@ import (
 
 func main() {
 	// mysql.Example1()
-	mysql.Example2()
+	//mysql.Example2()
+	mysql.Example3()
 }
