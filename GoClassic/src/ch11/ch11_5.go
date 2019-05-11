@@ -11,6 +11,7 @@
 package ch11
 
 import (
+	"strings"
 	"net/url"
 	"log"
 	"fmt"
@@ -20,12 +21,23 @@ import (
 // 读取header
 func header(w http.ResponseWriter, r *http.Request) {
 	// r.ParseForm()
+	fmt.Println(r.URL.Host)
 	fmt.Println("Header Content")
 	// for k, v := range r.Header {
 	// 	fmt.Println(k,v)
 	// }
 	fmt.Println(r.Header.Get("Accept"))
 	fmt.Fprintln(w, r.Header)
+}
+
+// 处理所有请求
+func all(w http.ResponseWriter, r *http.Request) {
+	// 处理所有的请求
+	paths := strings.Split(r.URL.Path,`/`)
+	for _,subPath := range paths {
+		fmt.Println(subPath)
+	}
+	fmt.Println(r)
 }
 
 // 读取body
@@ -45,6 +57,7 @@ func Extern6() {
 	server := http.Server {
 	   Addr:"localhost:8090",
 	}
+	http.HandleFunc("/", all)
 	http.HandleFunc("/header",header)
 	http.HandleFunc("/body",body)
 	server.ListenAndServe()
