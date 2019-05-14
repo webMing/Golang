@@ -33,6 +33,7 @@ func header(w http.ResponseWriter, r *http.Request) {
 // 处理所有请求
 func all(w http.ResponseWriter, r *http.Request) {
 	// 处理所有的请求
+	r.ParseForm()
 	paths := strings.Split(r.URL.Path,`/`)
 	for _,subPath := range paths {
 		fmt.Println(subPath)
@@ -42,14 +43,24 @@ func all(w http.ResponseWriter, r *http.Request) {
 
 // 读取body
 func body(w http.ResponseWriter,r *http.Request) {
+	// r.ParseForm()
+	// fmt.Println(r.FormValue("age"))
+	//err := r.ParseMultipartForm(2024)
+	//if  err != nil  {
+		//og.Fatal(err)
+	//}
+	/*
 	fmt.Printf("ContentLenth:%d \n",r.ContentLength)
-	// body := make([]byte, r.ContentLength)
-	body := []byte{}
+	body := make([]byte, r.ContentLength)
+	// body := []byte{}
 	n,err := r.Body.Read(body)
 	if n == 0 && (err != nil) {
-		// log.Fatalln(err)
+		log.Fatalln(err)
 	}
+	fmt.Printf("Body Content:%s", body)
 	fmt.Fprintf(w,"%s",body)
+	*/
+	fmt.Println(r)
 }
 
 // Extern6 把request的请求读到 terminal中
